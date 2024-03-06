@@ -98,7 +98,7 @@
 
       font-size: $font-size-h1;
       letter-spacing: 1px;
-      line-height: 1;
+      line-height: 1.1;
 
       a {
         font-size: $font-size-h1;
@@ -115,7 +115,7 @@
       font-size: $font-size-h2;
       font-weight: 600;
       letter-spacing: 1px;
-      line-height: 1;
+      line-height: 1.1;
 
       a {
         font-size: $font-size-h2;
@@ -132,7 +132,7 @@
       font-size: $font-size-h3;
       font-weight: 600;
       letter-spacing: 1px;
-      line-height: 1;
+      line-height: 1.1;
 
       a {
         font-size: $font-size-h3;
@@ -145,8 +145,12 @@
 
     ul,
     ol {
-      line-height: 1.9em;
+      line-height: 1.6em;
       font-weight: 400;
+    }
+
+    li:not(.post__meta-item):not(:first-child) {
+      margin-top: 0.4em;
     }
 
     img {

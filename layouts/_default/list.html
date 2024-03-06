@@ -6,6 +6,7 @@
       animated fadeInDown
     {{ end }}"
   >
+    <h1>{{ .Params.Title }}</h1>
     {{ range .Data.Pages.GroupByDate "2006" }}
       <div class="archive__heading">{{ .Key }}</div>
       {{ range .Pages }}

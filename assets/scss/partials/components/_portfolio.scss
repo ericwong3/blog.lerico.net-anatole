@@ -31,6 +31,7 @@
     font-size: 2.6rem;
     line-height: 1;
     font-weight: 600;
+    margin-bottom: 0;
   }
 
   &__image {
@@ -54,8 +55,8 @@
       &--left {
         margin-right: auto;
         margin-left: auto;
-        width: calc(100% - 64px);
-        padding: 32px 32px 0px 32px;
+        // width: calc(100% - 64px);
+        // padding: 32px 32px 0px 32px;
         max-width: inherit;
 
         @include themed() {
@@ -88,7 +89,7 @@
   }
 
   &__description {
-    padding: 32px;
+    padding: 32px 0;
     position: relative;
 
     @include themed() {

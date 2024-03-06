@@ -24,6 +24,8 @@
     name="description"
     content="{{ if .Params.description }}
       {{- .Params.description -}}
+    {{ else if .Params.summary }}
+      {{- .Params.summary -}}
     {{ else }}
       {{- .Site.Params.description -}}
     {{ end }}"

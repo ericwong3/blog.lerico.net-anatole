@@ -1,14 +1,14 @@
 {{ define "main" }}
   {{ range $index, $elemen:= .Site.Data.portfolio.portfolioitems }}
     <div
-      class="post {{ with .Site.Params.doNotLoadAnimations }}
+      class="post {{ with $.Site.Params.doNotLoadAnimations }}
         .
       {{ else }}
         animated fadeInDown
       {{ end }}"
     >
       {{ $anchorTitle := delimit (split .title " ") "" }}
-      <h2 class="portfolio__title" id="{{ $anchorTitle | lower }}">{{ title .title }}</h2>
+      <h1 class="portfolio__title" id="{{ $anchorTitle | lower }}">{{ title .title }}</h1>
       {{ range $i, $p := .portfolioitem }}
         <div class="portfolio">
           {{ if .image }}
