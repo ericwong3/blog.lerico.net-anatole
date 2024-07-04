@@ -11,15 +11,24 @@
 
   &__item {
     border-radius: 15px;
+
+    &:hover {
+      .projects__item-image {
+        transform: scale(1.05);
+      }
+    }
   }
 
   // &__item-link {}
 
-  // &__item-image-wrapper {}
+  &__item-image-wrapper {
+    overflow: hidden;
+  }
 
   &__item-image {
     display: block;
     width: 100%;
+    transition: 0.3s transform ease-out;
   }
 
   &__item-text {
