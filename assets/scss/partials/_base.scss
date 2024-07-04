@@ -4,6 +4,10 @@
   font-family: inherit;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   @include ltr {
     font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Work Sans', 'Hiragino Sans GB', sans-serif;

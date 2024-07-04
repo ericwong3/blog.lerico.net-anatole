@@ -18,7 +18,8 @@
     }
 
     @include widescreen {
-      width: calc(#{$content-ratio} * 80%);
+      // width: calc(#{$content-ratio} * 80%);
+      width: $content-max-width;
     }
 
     &--fullscreen {
@@ -45,7 +46,8 @@
     }
 
     @include widescreen {
-      width: calc(#{$sidebar-ratio} * 80%);
+      // width: calc(#{$sidebar-ratio} * 80%);
+      width: $sidebar-max-width;
     }
 
     &--hidden {

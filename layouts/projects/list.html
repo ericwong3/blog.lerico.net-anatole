@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div
+    class="post {{ with .Site.Params.doNotLoadAnimations }}
+      .
+    {{ else }}
+      animated fadeInDown
+    {{ end }}"
+  >
+    <div class="post__content">
+      <h1>{{ title .Title }}</h1>
+      {{ .Content }}
+    </div>
+  </div>
+
+  <ul class="projects">
+    {{ range $index, $elemen:= .Pages }}
+      <li class="projects__item">
+        <a class="projects__item-link" href="{{ .RelPermalink }}">
+          <div class="projects__item-image-wrapper">
+            <img class="projects__item-image" src="{{ .Params.Image | relURL }}" alt="{{ .Title | markdownify }}" />
+          </div>
+          <div class="projects__item-text">
+            <div class="projects__item-title">
+              {{ .Title | markdownify }}
+            </div>
+            <div class="projects__item-description">
+              {{ .Summary | markdownify }}
+            </div>
+          </div>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+{{ end }}

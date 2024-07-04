@@ -1,0 +1,20 @@
+a.linkpill {
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-style: normal;
+  border-radius: 999em;
+  padding: 10px 15px;
+  margin: 5px 15px 5px 0;
+
+  @include themed() {
+    border: 1px solid t('primary-light');
+    color: t('primary');
+  }
+}
